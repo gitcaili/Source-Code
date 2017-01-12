@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5871BD0-1598-43C0-8BEE-4ACC2D52CB12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NZPACRM</RootNamespace>
+    <AssemblyName>EnablingCRM</AssemblyName>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <Win32Resource>
+    </Win32Resource>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/Crm Basic Template1/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\dotnet\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\Microsoft.Office.Interop.Excel\12.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="SageCRMNet, Version=1.5.0.0, Culture=neutral, PublicKeyToken=465a788410136ea2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Worik\Training\CRMDotNet\7.3\SageCRMNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SageCrmWrapper, Version=1.5.0.0, Culture=neutral, PublicKeyToken=465a788410136ea2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Worik\Training\CRMDotNet\7.2\SageCrmWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Client\ClientAddress.cs" />
+    <Compile Include="Client\ClientAddressEdit.cs" />
+    <Compile Include="Client\ClientAddressList.cs" />
+    <Compile Include="Client\ClientConfirmDelete.cs" />
+    <Compile Include="Client\ClientPhoneEmailPage.cs" />
+    <Compile Include="Client\ClientImportCompletePage.cs" />
+    <Compile Include="Client\Redirect.cs" />
+    <Compile Include="Client\RedirectorPublicationList.cs" />
+    <Compile Include="Client\RedirectClientPhoneEmailPage.cs" />
+    <Compile Include="Common\CRMHelper.cs" />
+    <Compile Include="CRMBase.cs" />
+    <Compile Include="CustomPage.cs" />
+    <Compile Include="Client\ImportClientsPage.cs" />
+    <Compile Include="Plan\AjaxCallPage.cs" />
+    <Compile Include="Plan\AjaxSetCommissionOnChangePage.cs" />
+    <Compile Include="Plan\AjaxSetStandardSize.cs" />
+    <Compile Include="Plan\importNabsfile.cs" />
+    <Compile Include="Plan\PlanAgencyCodeAjaxCallPage.cs" />
+    <Compile Include="Plan\PlanBookingConfirmed.cs" />
+    <Compile Include="Plan\PlanCopy.cs" />
+    <Compile Include="Plan\PlanClose.cs" />
+    <Compile Include="Plan\PlanCommunication.cs" />
+    <Compile Include="Plan\PlanConflict.cs" />
+    <Compile Include="Plan\PlanCopyRevisedAjaxCall.cs" />
+    <Compile Include="Plan\PlanCopy_old.cs" />
+    <Compile Include="Plan\PlanDedupe.cs" />
+    <Compile Include="Plan\PlanDeletePage.cs" />
+    <Compile Include="Plan\PlanImportExcel.cs" />
+    <Compile Include="Plan\PlanImport.cs" />
+    <Compile Include="Plan\PlanImportSS.cs" />
+    <Compile Include="Plan\PlanImportStatus.cs" />
+    <Compile Include="Plan\PlanLibraryPage.cs" />
+    <Compile Include="Plan\PlanNewCopyPage.cs" />
+    <Compile Include="Plan\PlanNewPage.cs" />
+    <Compile Include="Plan\PlanNotesPage.cs" />
+    <Compile Include="Plan\PlanOtherImport.cs" />
+    <Compile Include="Plan\PlanRedirector.cs" />
+    <Compile Include="Plan\PlanReffralPage.cs" />
+    <Compile Include="Plan\PlanSearchPage.cs" />
+    <Compile Include="Plan\PlanSendToAgencyPage.cs" />
+    <Compile Include="Plan\PlanSendToSelfPage.cs" />
+    <Compile Include="Plan\PlanSendToSelfPageBACKUP.cs" />
+    <Compile Include="Plan\PlanSendWhenBooked.cs" />
+    <Compile Include="Plan\PlanSummaryPage.cs" />
+    <Compile Include="Plan\PlanSummaryPopPage.cs" />
+    <Compile Include="Plan\PlanTracking.cs" />
+    <Compile Include="Plan\ReactivatePlanPage.cs" />
+    <Compile Include="Plan\SectionSubSectionPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Publication\ImportPublicationPage.cs" />
+    <Compile Include="Publication\PublicationAddressEdit.cs" />
+    <Compile Include="Publication\PublicationAddressListPage.cs" />
+    <Compile Include="Publication\PublicationAddressNew.cs" />
+    <Compile Include="Publication\PublicationConfirmDelete.cs" />
+    <Compile Include="Publication\PublicationImportCompletePage.cs" />
+    <Compile Include="Publication\PublicationPhoneEmailPage.cs" />
+    <Compile Include="Publication\RedirectPublicationPhoneEmailPage.cs" />
+    <Compile Include="Publisher\ImportPublishersPage.cs" />
+    <Compile Include="Publisher\PublisherConfirmDelete.cs" />
+    <Compile Include="Publisher\PublisherAddressEdit.cs" />
+    <Compile Include="Publisher\PublisherAddressList.cs" />
+    <Compile Include="Publisher\PublisherAddressNew.cs" />
+    <Compile Include="Publisher\PublisherPhoneEmailPage.cs" />
+    <Compile Include="Publisher\PublishersImportCompletePage.cs" />
+    <Compile Include="Publisher\RedirectorPublishersList.cs" />
+    <Compile Include="Publisher\RedirectPublishersPhoneEmailPage.cs" />
+    <Compile Include="RateCard\ImportRateCard.cs" />
+    <Compile Include="RateCard\RateCardAjaxCallPage.cs" />
+    <Compile Include="RateCard\RateCardAjaxCallPageCustom.cs" />
+    <Compile Include="RateCard\RateCardAjaxCallPageDefault.cs" />
+    <Compile Include="RateCard\RateCardAjaxInserts.cs" />
+    <Compile Include="RateCard\RateCardAjaxInsertsCalculation.cs" />
+    <Compile Include="RateCard\RateCardContractAjaxCallPage.cs" />
+    <Compile Include="RateCard\RateCardEditPage.cs" />
+    <Compile Include="RateCard\RateCardImportStatus.cs" />
+    <Compile Include="RateCard\RateCardListPage.cs" />
+    <Compile Include="RateCard\RateCardManagementPage.cs" />
+    <Compile Include="RateCard\RateCardPageDelete.cs" />
+    <Compile Include="RateCard\RateCardSS.cs" />
+    <Compile Include="Sections\SectionDeletePage.cs" />
+    <Compile Include="Sections\SectionListPage.cs" />
+    <Compile Include="Sections\SectionPageEdit.cs" />
+    <Compile Include="Sections\SectionPageNew.cs" />
+    <Compile Include="Sections\SubSectionListPage.cs" />
+    <Compile Include="Sections\SubSectionPageDelete.cs" />
+    <Compile Include="Sections\SubSectionPageNew.cs" />
+    <Compile Include="Sections\SubSectionsPageEdit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
